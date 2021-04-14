@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     color: gray;
     opacity: 0.5;
   }
-
+  
 `;
 
 export default GlobalStyle;

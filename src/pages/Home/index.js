@@ -1,38 +1,29 @@
-import React,{ useState, useEffect } from 'react';
-import axios from 'axios';
-import { API_KEY } from '../../key';
-import { API_URL, IMAGE_BASE_URL } from '../../Config';
+import React,{ useEffect } from 'react';
+import { IMAGE_BASE_URL } from '../../Config';
 import { Sub } from '../../components/Nav';
 import { BackgroundImg } from './Home.styled';
+import { LOAD_MOVIES_REQUEST } from '../../store/reducers/movie';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Home() {
-  const [movie, setMovie] = useState([]);
+  const { homeMovie } = useSelector((state) => state.movie);
+  const dispatch = useDispatch();
   
+  //console.log(movies.title);
   useEffect(() => {
-    const num = Math.floor(Math.random()*20);
-    // const num = 2;
-    async function getMovie() {
-      try {
-        const movies = await axios.get(`${API_URL}movie/popular?api_key=${API_KEY}&language=ko-KR`);
-        console.log(movies.data.results[num]);
-        setMovie(movies.data.results[num]);
-        const about = await axios.get(`${API_URL}movie/${movie.id}?api_key=${API_KEY}&language=ko-KR`);
-        console.log(about.data);
-      }catch(error){
-        console.log(error);
-      }
-    };
-    getMovie();
+    dispatch({
+      type: LOAD_MOVIES_REQUEST,
+      data: 'popular',
+    });
   }, []);
 
   return (
     <>
-      <BackgroundImg bgPath={`${IMAGE_BASE_URL}w1280${movie.backdrop_path}`}>
+      {homeMovie && <BackgroundImg bgPath={`${IMAGE_BASE_URL}w1280${homeMovie.backdrop_path}`}>
         <Sub />
-        <div>
-          하하ㅏㅎ
-        </div>
-      </BackgroundImg>
+        <h2>{homeMovie.title}</h2>
+        <h2>{homeMovie.tagline}</h2>
+      </BackgroundImg>}
     </>
   )
 }

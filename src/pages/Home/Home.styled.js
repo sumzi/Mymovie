@@ -24,6 +24,15 @@ const BackgroundImg = styled.div`
   width: 100%;
   background-size: cover;
   height: 100vh-60px;
+  color: white;
 `;
 
-export { BackgroundImg };
+const Test = styled.div`
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    bottom: 0px;
+`;
+
+export { BackgroundImg, Test };
