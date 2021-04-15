@@ -27,12 +27,15 @@ const BackgroundImg = styled.div`
   color: white;
 `;
 
-const Test = styled.div`
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 60px;
-    bottom: 0px;
+const Detail = styled.div`
+  //border: 2px solid yellow;
+  position: absolute;
+  left: 50px;
+  bottom: 100px;
+  width: 700px;
+  opacity:0.7;
+  text-shadow: 2px 2px 2px black;
+    
 `;
 
-export { BackgroundImg, Test };
+export { BackgroundImg, Detail };

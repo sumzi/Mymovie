@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  h1 {
+    color: white;
+  }
+  
   footer {
     position: absolute;
     bottom: 10px;

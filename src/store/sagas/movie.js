@@ -5,28 +5,22 @@ import {
   LOAD_MOVIES_SUCCESS,
   LOAD_MOVIES_FAILURE,
 } from '../reducers/movie';
-import { API_URL, API_KEY } from '../../Config';
+import  { API_URL, API_KEY } from '../../Config';
 
 
 function loadMoviesAPI(data){
-  return axios.get(`${API_URL}movie/${data}?api_key=${API_KEY}&language=ko-KR`);
+  console.log(data);
+  return axios.get(`${API_URL}${data}?api_key=${API_KEY}&language=ko-KR`);
 }
-
-function getMovieAPI(data){
-  console.log(data.id)
-  return axios.get(`${API_URL}movie/${data.id}?api_key=${API_KEY}&language=ko-KR`);
-}
-
 
 function* loadMovies(action) {
   try{
-    const tmp = yield call(loadMoviesAPI, action.data);
-    const num = Math.floor(Math.random()*20);
-    const result = yield call(getMovieAPI, tmp.data.results[num]);
-    console.log(result);
+    const result = yield call(loadMoviesAPI, action.path);
+    console.log(result.data.results);
     yield put({
       type: LOAD_MOVIES_SUCCESS,
-      data: result.data,
+      movieType: action.movieType,
+      data: result.data.results,
     });
   } catch(err) {
     console.error(err);
