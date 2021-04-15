@@ -1,18 +1,19 @@
 import React from 'react'
 import movie from '../../../images/movie.png';
+import { Link } from 'react-router-dom';
 import { MainWrapper, Left, Right } from './Main.styled';
 
 function Main() {
   return (
     <MainWrapper>
       <Left>
-        <a href='/'>
+        <Link to='/'>
           <img src={movie} alt='movie'/>
-        </a>
+        </Link>
       </Left>
       <Right>
-        <a href='/search'>🎥</a>
-        <a href='/like'>🤍</a>
+        <Link to='/search'>🎥</Link>
+        <Link to='/like'>🤍</Link>
       </Right>
     </MainWrapper>
   )

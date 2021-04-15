@@ -4,7 +4,7 @@ const SubWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-  // border: 1px solid blue;
+  //border: 1px solid blue;
   height: 60px;
   width: 80%;
   margin: 0 auto;
