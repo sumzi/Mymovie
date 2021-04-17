@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { SubWrapper } from "./Sub.styled";
+import { SubWrapper, Menu } from "./Sub.styled";
+import { LOAD_MOVIES_REQUEST } from "../../../store/reducers/movie";
 
-const menu = [
+const menuType = [
   {
     type: "Now Playing",
     path: "movie/now_playing",
@@ -23,21 +24,28 @@ const menu = [
 ];
 
 function Sub() {
+  const dispatch = useDispatch();
+
+  const typeChange = (e) => {
+    dispatch({
+      type: LOAD_MOVIES_REQUEST,
+      data: e.target.dataset.idx
+    });
+  };
   return (
     <SubWrapper>
-      {menu.map((v) => {
+      {menuType.map((v,i) => {
         return (
           <div key={v.type}>
-            <Link
-              to={{
-                pathname: "/movie",
-                state: {
-                  type: v.type,
-                  path: v.path,
-                },
-              }}
-            >
-              {v.type}
+            <Link to="/movie">
+              <Menu
+                data-type={v.type}
+                data-path={v.path}
+                data-idx={i}
+                onClick={typeChange}
+              >
+                {v.type}
+              </Menu>
             </Link>
           </div>
         );

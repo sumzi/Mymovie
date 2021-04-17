@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../styles/variables';
 
 const SubWrapper = styled.div`
   display: flex;
@@ -11,14 +12,22 @@ const SubWrapper = styled.div`
   line-height: 60px;
   font-size: 20px;
   text-shadow: 2px 2px 2px black;
-  color: gray;
   opacity: 0;
   transition: 1s;
-  :hover {
+  &:hover {
     opacity: 1;
     transition: 1s;
   }
 `;
 
+const Menu = styled.div`
+  //border: 2px solid red;
+  cursor: pointer;
+  color: gray;
+  &:hover {
+    color: white;
+  }
+`;
 
-export { SubWrapper };
+
+export { SubWrapper, Menu };
