@@ -1,10 +1,12 @@
 import React from 'react'
-
+import {  } from './Search.styled';
+import { Input } from 'antd';
+import 'antd/dist/antd.css';
 function Search() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Input maxLength='10'/>
+    </>
   )
 }
 
