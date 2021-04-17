@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/variables';
 
 const BackgroundImg = styled.div`
   background: linear-gradient(
@@ -30,12 +31,31 @@ const BackgroundImg = styled.div`
 const Detail = styled.div`
   //border: 2px solid yellow;
   position: absolute;
-  left: 50px;
-  bottom: 100px;
-  width: 700px;
-  opacity:0.7;
+  width: 100%;
+  bottom: 80px;
   text-shadow: 2px 2px 2px black;
-    
+  text-align: center;
+  padding: 0 30px;
+  @media ${device.tablet} {
+    text-align: left;
+    padding: 0 60px;
+    bottom: 80px;
+    width: 70%;
+  }
+  p:nth-child(1) {
+    font-style: italic;
+    font-size: 25px;
+  }
+  p:nth-child(2) {    
+    font-size: 20px;
+  }
+`;
+const Wrapper = styled.div`
+  //border: 1px solid red;
+  display: none;
+  @media ${device.tablet} {
+    display: block;
+}
 `;
 
-export { BackgroundImg, Detail };
+export { BackgroundImg, Detail, Wrapper };

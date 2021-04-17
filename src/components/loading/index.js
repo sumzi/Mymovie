@@ -4,9 +4,8 @@ import { Spin } from 'antd';
 import styled from 'styled-components';
 
 const LoadingWrapper = styled.div`
-  margin: 0 auto;
-  padding-top: 150px;
   text-align: center;
+  padding-top: 30vh;
 `;
 
 function Loading() {
