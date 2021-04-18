@@ -10,7 +10,6 @@ const MainWrapper = styled.div`
   @media ${device.tablet} {
     padding: 0 50px;
   }
-  //border: 1px solid red;
 `;
 
 const LeftWrapper = styled.div`

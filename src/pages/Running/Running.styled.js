@@ -16,13 +16,13 @@ const BackgroundImg = styled.div`
     rgba(0, 0, 0, 0.5) 80%,
     rgba(0, 0, 0, 0.75) 90%,
     rgba(0, 0, 0, 1) 100%
-  ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`};  
-  position: absolute;
+  ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`}; 
+  background-size: cover;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: cover;
   transition: .5s;
   opacity: 0.7;
 `;
@@ -36,7 +36,6 @@ const MovieWrapper = styled.div`
   top: 110px;
   padding: 20px;
   margin: 0 20px;
-  overflow-y: scroll;
 
   div {
     height:100%;
