@@ -4,6 +4,9 @@ import {
   LOAD_MOVIES_REQUEST,
   LOAD_MOVIES_SUCCESS,
   LOAD_MOVIES_FAILURE,
+  BACKGROUND_IMAGE_REQUEST,
+  BACKGROUND_IMAGE_SUCCESS,
+  BACKGROUND_IMAGE_FAILURE,
 } from '../reducers/movie';
 import  { API_URL, API_KEY } from '../../Config';
 
@@ -47,12 +50,32 @@ function* loadMovies(action) {
   }
 }
 
+function* backgroundImage(action) {
+  try{
+    yield put({
+      type: BACKGROUND_IMAGE_SUCCESS,
+      data: action.data,
+    });
+  } catch(err) {
+    console.error(err);
+    yield put({
+      type: BACKGROUND_IMAGE_FAILURE,
+      error: err.response.data,
+    })
+  }
+}
+
 function* watchLoadMovies() {
   yield takeLatest(LOAD_MOVIES_REQUEST, loadMovies);
+}
+
+function* watchBackgroundImage() {
+  yield takeLatest(BACKGROUND_IMAGE_REQUEST, backgroundImage);
 }
 
 export default function* movieSaga() {
   yield all([
     fork(watchLoadMovies),
+    fork(watchBackgroundImage),
   ])
 }
