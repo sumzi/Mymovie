@@ -5,7 +5,7 @@ import { RightWrapper } from "./Main.styled";
 function Right() {
   return (
     <RightWrapper>
-      <Link to="/movie">
+      <Link to="/running">
         <div>🎥</div>
       </Link>
       <Link to="/like">

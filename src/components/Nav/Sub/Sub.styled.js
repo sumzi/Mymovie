@@ -6,26 +6,28 @@ const SubWrapper = styled.div`
   justify-content: space-around;
   flex-flow: row wrap;
   //border: 1px solid blue;
-  height: 60px;
-  width: 80%;
+  height: 40px;
+  width: 100 %;
   margin: 0 auto;
-  line-height: 60px;
-  font-size: 20px;
-  text-shadow: 2px 2px 2px black;
-  opacity: 0;
-  transition: 1s;
-  &:hover {
-    opacity: 1;
-    transition: 1s;
+  line-height: 40px;
+  @media ${device.tablet} {
+    padding: 0 120px;
   }
+  z-index: 20;
 `;
 
 const Menu = styled.div`
   //border: 2px solid red;
+  z-index: 10;
   cursor: pointer;
-  color: gray;
+  color: ${props => props.flag?'white':'gray'};
+  font-size: 16px;
   &:hover {
-    color: white;
+    transform: scale(1.15);
+    transition: .2s;
+  }
+  @media ${device.tablet} {
+    font-size: 22px;
   }
 `;
 

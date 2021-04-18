@@ -23,22 +23,22 @@ const RightWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   //border: 2px solid red;
-  width: 90px;
+  width: 120px;
   @media ${device.tablet} {
     width: 140px;
   }
   div {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 60px;
     @media ${device.tablet} {
       font-size: 30px;
     }
     //border: 2px solid blue;
   }
+  z-index: 20;
 `;
 const Logo = styled.div`
-  //border: 1px solid yellow;
   width: 70px;
   @media ${device.tablet} {
     width: 100px;
@@ -46,6 +46,7 @@ const Logo = styled.div`
   img {
     width: 100%;
   }
+  z-index: 21;
 `;
 
 export { MainWrapper, LeftWrapper, RightWrapper, Logo };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { SubWrapper, Menu } from "./Sub.styled";
@@ -24,32 +24,26 @@ const menuType = [
 ];
 
 function Sub() {
+  const { movieType } = useSelector(state => state.movie)
   const dispatch = useDispatch();
 
   const typeChange = (e) => {
+    console.log(e.target.id);
     dispatch({
       type: LOAD_MOVIES_REQUEST,
-      data: e.target.dataset.idx
+      data: e.target.id,
     });
   };
+
+  
   return (
     <SubWrapper>
       {menuType.map((v,i) => {
         return (
-          <div key={v.type}>
-            <Link to="/movie">
-              <Menu
-                data-type={v.type}
-                data-path={v.path}
-                data-idx={i}
-                onClick={typeChange}
-              >
-                {v.type}
-              </Menu>
-            </Link>
-          </div>
-        );
+          <Menu onClick={typeChange} key={i} id={i} flag={movieType === v.type ? 1 : 0}>{v.type}</Menu>
+        )
       })}
+      
     </SubWrapper>
   );
 }
