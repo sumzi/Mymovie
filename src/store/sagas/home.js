@@ -18,7 +18,6 @@ function* homeMovie(action) {
     const movies = yield call(getMoviesAPI);
     const num = Math.floor(Math.random()*20);
     const result = yield call(homeMovieAPI, movies.data.results[num].id );
-    console.log(result.data)
     yield put({
       type:  HOME_MOVIE_SUCCESS,
       data: {

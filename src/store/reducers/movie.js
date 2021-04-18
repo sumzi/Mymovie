@@ -38,8 +38,8 @@ const reducer = (state = initialState, action) =>
         break;
       }
       case LOAD_MOVIES_FAILURE:
-        draft.backgroundImageLoading = false;
-        draft.backgroundImageError = action.error;
+        draft.loadMoviesLoading = false;
+        draft.loadMoviesError = action.error;
         break;
       case BACKGROUND_IMAGE_REQUEST:
         draft.backgroundImageLoading = true;
@@ -49,12 +49,12 @@ const reducer = (state = initialState, action) =>
       case BACKGROUND_IMAGE_SUCCESS: {
         draft.backgroundImageLoading = false;
         draft.backgroundImageDone = true;
-        draft.backgroundImg = action.data;
+        draft.backgroundImage = action.data;
         break;
       }
       case BACKGROUND_IMAGE_FAILURE:
-        draft.loadMoviesLoading = false;
-        draft.loadMoviesError = action.error;
+        draft.backgroundImageLoading = false;
+        draft.backgroundImageError = action.error;
         break;
       default:
         break;
