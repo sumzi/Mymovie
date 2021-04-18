@@ -9,23 +9,18 @@ function Card(movie) {
   const dispatch = useDispatch();
 
   const mouseEnter = () => {
-    console.log(movie.movieTitle);
     dispatch({
       type: BACKGROUND_IMAGE_REQUEST,
       data: movie.movieBgImg
-    })
+    });
   };
-
-  const movieClick = () => {
-
-  }
   
   return (
       <Col lg={6} md={8} xs={24}>
         <CardWrapper>
           <Link to={`/about/${movie.movieId}`}>
             {movie.image ? (
-              <img src={movie.image} alt={movie.movieTitle} onMouseEnter={mouseEnter} onClick={movieClick}/>
+              <img src={movie.image} alt={movie.movieTitle} onMouseEnter={mouseEnter} />
             ) : (
               <Image src="err" />
             )}

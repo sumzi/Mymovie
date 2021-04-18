@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     overflow: hidden;
     background-color:black;
+    min-width: 330px;
   }
 
   div {
@@ -33,7 +34,6 @@ const GlobalStyle = createGlobalStyle`
     color: gray;
     opacity: 0.5;
   }
-  
 `;
 
 export default GlobalStyle;
