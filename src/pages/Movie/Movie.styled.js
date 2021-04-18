@@ -1,19 +1,5 @@
 import styled from 'styled-components';
-
-const MovieWrapper = styled.div`
-  //border: 2px solid red;
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  top: 100px;
-  padding: 20px;
-  margin: 20px;
-  div {
-    height:100%;
-  }
-  overflow-y: scroll;
-`;
+import { device } from '../../styles/variables';
 
 const BackgroundImg = styled.div`
   background: linear-gradient(
@@ -32,17 +18,34 @@ const BackgroundImg = styled.div`
     rgba(0, 0, 0, 1) 100%
   ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`};  
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
   background-size: cover;
-  height: 100vh-60px;
-  color: white;
+  transition: .5s;
+  opacity: 0.7;
 `;
 
+const MovieWrapper = styled.div`
+  //border: 2px solid red;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  top: 110px;
+  padding: 20px;
+  margin: 0 20px;
+  overflow-y: scroll;
 
+  div {
+    height:100%;
+  }
+
+  @media ${device.tablet} {
+    margin: 0 50px;
+  }
+`;
 
 
 export { BackgroundImg, MovieWrapper };
