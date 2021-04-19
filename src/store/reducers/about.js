@@ -1,7 +1,41 @@
 import produce from "immer";
 
 const initialState = {
-  movie: {},
+  movie: {
+    id: '',
+    release_date: '',
+    title: '',
+    originalTitle: '',
+    tagline: '',
+    releaseDate: '',
+    runtime: 0,
+    rating: 0.0,
+    genres: [],
+    overview: '',
+    poster_path: '',
+    backdrop_path: '',
+    images: [],
+    videos: [
+      {
+        path: '',
+        thumbnail: '',
+      },
+    ],
+    // simliars: [
+    //   {
+    //     id: '',
+    //     title: '',
+    //     posterPath: '',
+    //   },
+    // ],
+    casts: [
+      {
+        name: '',
+        role: '',
+        profilePath: '',
+      },
+    ],
+  },
   detailMovieLoading: false,
   detailMovieDone: false,
   detailMovieError: null,

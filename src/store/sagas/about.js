@@ -9,7 +9,7 @@ import  { API_URL, API_KEY, YOUTUBE_PATH } from '../../Config';
 
 const getMovieDetail = async (id)=> {
   const result = await axios.get(`${API_URL}movie/${id}?api_key=${API_KEY}&language=ko-KR`);
-  
+  console.log(result.data)
   let genres = '';
   const genreList = result.data.genres.map(genre => genre.name);
   if (result.data.genres.length > 3) {
@@ -18,6 +18,7 @@ const getMovieDetail = async (id)=> {
   genres = genreList.join(' | ');
   return {
     id: id,
+    release_date: result.data.release_date,
     title: result.data.title,
     originalTitle: result.data.original_title,
     tagline: result.data.tagline,

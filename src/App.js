@@ -16,9 +16,6 @@ function App() {
         <Route path='/search' component={Search} />
         <Route path='/like' component={Like} />
       </Switch>
-      <footer>
-        <p>Copyrignt © 2021 sumzi</p>
-      </footer>
     </>
   );
 }

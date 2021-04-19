@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
   body {
     margin: 0;
@@ -23,16 +22,7 @@ const GlobalStyle = createGlobalStyle`
     color: white;
   }
   
-  footer {
-    position: absolute;
-    bottom: 10px;
-    right: 0;
-    left: 0;
-    font-size: 12px;
-    text-align: center;
-    color: gray;
-    opacity: 0.5;
-  }
+ 
 `;
 
 export default GlobalStyle;
