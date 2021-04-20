@@ -1,3 +1,4 @@
-export { default as Casts } from './Casts';
-export { default as Image } from './Image';
-export { default as Video } from './Video';
+export { default as AboutCasts } from './AboutCasts';
+export { default as AboutImages } from './AboutImages';
+export { default as AboutVideos } from './AboutVideos';
+export { default as AboutStory } from './AboutStory';
