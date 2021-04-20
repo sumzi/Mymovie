@@ -39,7 +39,7 @@ const getMovieVideo = async (id)=> {
   const result = await axios.get(`${API_URL}movie/${id}/videos?api_key=${API_KEY}&language=ko-KR`);
   const youtubeVideos = result.data.results.filter(video => video.site === 'YouTube');
   const videos = youtubeVideos.map(video => ({
-    path: `${YOUTUBE_PATH}${video.key}`,
+    path: video.key,
   }))
   return videos;
 }

@@ -1,12 +1,14 @@
 import styled from 'styled-components';
-import { Image,Rate  } from 'antd';
+import { Image } from 'antd';
 import { device } from '../../styles/variables';
 
 const DetailWrapper = styled.div`
+  margin-top: 60px;
   border: 1px solid red;
   padding: 10px;
   @media ${device.tablet} {
     width: 750px;
+    margin-top: 70px;
   }
 `;
 const Block = styled.div`
