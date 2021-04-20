@@ -25,7 +25,7 @@ function Movie() {
       <Sub />
       {backgroundImage && <BackgroundImg bgPath={`${IMAGE_BASE_URL}w1280${backgroundImage}`}/>}
       <MovieWrapper>
-        <Row gutter={[16, 16]}>
+        <Row gutter={[25, 25]}>
           {movies &&
             movies.map((movie, index) => (
               <Card

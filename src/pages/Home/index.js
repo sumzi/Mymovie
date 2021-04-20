@@ -7,7 +7,7 @@ import Loading from "../../components/Loading";
 
 function Home() {
   const dispatch = useDispatch();
-  const { homeMovie, homeMovieLoading, homeMovieDone } = useSelector(
+  const { homeMovie, homeMovieDone } = useSelector(
     (state) => state.home
   );
 

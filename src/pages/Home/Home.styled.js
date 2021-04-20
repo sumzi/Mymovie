@@ -18,11 +18,14 @@ const BackgroundImg = styled.div`
     rgba(0, 0, 0, 1) 100%
   ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`};  
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 0;
   right: 0;
   bottom: 0;
   background-size: cover;
+  @media ${device.tablet} {
+    top: 70px;
+  }
 `;
 
 const Detail = styled.div`
@@ -33,18 +36,26 @@ const Detail = styled.div`
   text-shadow: 2px 2px 2px black;
   text-align: center;
   padding: 0 30px;
-  @media ${device.tablet} {
-    text-align: left;
-    padding: 0 60px;
-    bottom: 80px;
-    width: 70%;
-  }
+
   p:nth-child(1) {
     font-style: italic;
     font-size: 25px;
   }
   p:nth-child(2) {    
     font-size: 20px;
+  }
+
+  @media ${device.tablet} {
+    text-align: left;
+    padding: 0 80px;
+    bottom: 80px;
+    width: 70%;
+    p:nth-child(1) {
+      font-size: 35px;
+    }
+    p:nth-child(2) {    
+      font-size: 30px;
+    }
   }
 `;
 const Wrapper = styled.div`

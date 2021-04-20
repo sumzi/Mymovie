@@ -19,12 +19,15 @@ const BackgroundImg = styled.div`
   ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`}; 
   background-size: cover;
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
   right: 0;
   bottom: 0;
   transition: .5s;
-  opacity: 0.7;
+  opacity: 0.6;
+  @media ${device.tablet} {
+    top: 70px;
+  }
 `;
 
 const MovieWrapper = styled.div`
@@ -33,14 +36,9 @@ const MovieWrapper = styled.div`
   bottom: 50px;
   left: 0;
   right: 0;
-  top: 110px;
+  top: 100px;
   padding: 20px;
   margin: 0 20px;
-
-  div {
-    height:100%;
-  }
-
   @media ${device.tablet} {
     margin: 0 50px;
   }
