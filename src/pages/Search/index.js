@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { SEARCH_MOVIES_REQUEST, INIT_SEARCH_MOVIES } from '../../store/reducers/search';
 import { Row } from 'antd';
+import 'antd/dist/antd.css';
 import { SearchWrapper, Header, Section, InputWrapper } from './Search.styled';
 import { SearchCard } from '../../components/Card';
 
 function Search() {
   const dispatch = useDispatch();
   const { movies } = useSelector(state => state.search);
-  const [keyword, setKeyword] = useState('');
+  const [keyword, setKeyword] = useState('마블');
   const [word, setWord] = useState('');
 
   useEffect(() => {
+    dispatch({
+      type: SEARCH_MOVIES_REQUEST,
+      data: '마블',
+    });
     return () => {
       dispatch({
         type: INIT_SEARCH_MOVIES,
@@ -24,21 +29,17 @@ function Search() {
   };
 
   const keyPress = (e) => {
-    if (e.key === 'Enter' ) {
-      if (word === '') {
-        // 경고
-      }
-      else {
+    if (e.key === "Enter") {
+      if (word) {
         dispatch({
           type: SEARCH_MOVIES_REQUEST,
           data: word,
         });
-        setWord('');
+        setWord("");
         setKeyword(word);
       }
     }
-  }
-
+  };
   return (
     <SearchWrapper>
       <Header>
@@ -59,4 +60,4 @@ function Search() {
   )
 }
 
-export default Search
+export default Search;
