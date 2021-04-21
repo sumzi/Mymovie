@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const LoadingWrapper = styled.div`
   text-align: center;
-  padding-top: 30vh;
+  padding-top: 45vh;
 `;
 
 function Loading() {
