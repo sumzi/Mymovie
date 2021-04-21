@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { LOAD_MOVIES_REQUEST } from "../../store/reducers/movie";
 import { BackgroundImg, MovieWrapper } from "./Running.styled";
 import { Row } from "antd";
-import Card from '../../components/Card';
+import { RunningCard } from '../../components/Card';
 
 function Movie() {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function Movie() {
         data: "0",
       });
     }
-  }, []);
+  }, []); 
 
   return (
     <>
@@ -28,7 +28,7 @@ function Movie() {
         <Row gutter={[25, 25]}>
           {movies &&
             movies.map((movie, index) => (
-              <Card
+              <RunningCard
                 key={index}
                 image={
                   movie.poster_path
