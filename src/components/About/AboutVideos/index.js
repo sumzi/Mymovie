@@ -7,23 +7,26 @@ import { VideosWrapper, VideoWrapper } from "./AboutVideos.styled";
 import YouTube from 'react-youtube';
 function AboutVideos() {
   const { movie } = useSelector((state) => state.about);
+
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  
   const opts = {
     width: '100%',
-
+    playerVars: {
+      'origin': 'http://localhost:3000',
+    },
   }
   return (
     <VideosWrapper>
       <label>📹 동영상</label>
       <Slider {...settings}>
-        {movie.videos.map((video) => (
-          
-          <VideoWrapper>
+        {movie.videos.map((video,i) => (
+          <VideoWrapper key={i}>
             <YouTube videoId={video.path} opts={opts}/>
           </VideoWrapper>
         ))}

@@ -4,30 +4,30 @@ import { Image } from 'antd';
 
 const Wrapper = styled.div`
   width: 100%;
-  margin-top: 60px;
-  border: 1px solid red;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
+  border-bottom: 3px solid gray;
   @media ${device.tablet} {
     width: 750px;
-    margin-top: 70px;
+    display: flex;
     justify-content: space-around;
+    padding-bottom: 30px;
   }
+  padding-bottom: 20px;
 `;
-const PosterWrapper = styled.div`
-  width: 100%;
-  border: 1px solid red;
-`;
-const Poster = styled(Image)`
 
+const PosterWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const Poster = styled(Image)`
   display: flex;
   justify-content: space-around;
   width: 300px;
   height: 400px;
-  border: 3px solid white;
+  border: 3px solid gray;
   border-radius: 30px;
 `;
+
 const DetailWrapper = styled.div`
   @media ${device.tablet} {
     padding-left: 20px;
@@ -38,7 +38,6 @@ const DetailWrapper = styled.div`
   padding-top: 20px;
 
   div {
-    border: 1px solid white;
     display: flex;
     justify-content: space-around;
     @media ${device.tablet} {
@@ -46,23 +45,26 @@ const DetailWrapper = styled.div`
     }
   }
 
-  div:nth-child(1) {
+  .title {
     font-size: 30px;
     font-weight: bold;
   }
-  div:nth-child(2) {
+  .originalTitle .genres .rating {
     font-size: 17px;
   }
 `;
 
-
 const StoryWrapper = styled.div`
+  padding: 20px 0;
+  @media ${device.tablet} {
+    padding: 30px 0;
+  }
+
   label {
     font-weight: bold;
     font-size: 20px;
   }
   width: 100%;
-  padding: 20px 30px;
   height: 100%; 
   border-bottom: 3px solid gray;
   

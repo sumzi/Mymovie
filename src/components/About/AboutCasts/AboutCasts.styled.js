@@ -1,36 +1,35 @@
 import styled from 'styled-components';
+import { device } from '../../../styles/variables';
 
 const CastsWrapper = styled.div`
   label {
     font-weight: bold;
     font-size: 20px;
   }
-  //border: 1px solid yellow;
+  padding: 20px 0;
   width: 100%;
-  padding: 20px 30px;
   height: 100%; 
   border-bottom: 3px solid gray;
+  @media ${device.tablet} {
+    padding: 30px 0;
+  }
 `;
 
 const CastWrapper = styled.div`
-  //border: 1px solid red;
   height: 100%;
   
   padding: 8px;
   img {
     width: 100%;
     border-radius: 20px;
-    //border:1px solid snow;
   }
   .name {
     text-align: center;
-    //border: 1px solid white;
     font-size: 16px;
     font-weight: bold;
   }
   .role {
     text-align: center;
-    //border: 1px solid white;
   }
   
 `;
