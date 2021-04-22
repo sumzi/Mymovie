@@ -10,13 +10,13 @@ import {
 import { IMAGE_BASE_URL } from "../../../Config";
 
 function AboutStory() {
-  const { movie, detailMovieDone } = useSelector((state) => state.about);
+  const { movie } = useSelector((state) => state.about);
 
   return (
     <>
       <Wrapper>
         <PosterWrapper>
-        {detailMovieDone && <Poster
+        {movie.poster_path && <Poster
             src={`${IMAGE_BASE_URL}original${movie.poster_path}`}
             alt={movie.title}
         />}
@@ -30,6 +30,9 @@ function AboutStory() {
             {movie.genres} {movie.runtime}
           </div>
           <div className='rating'>⭐ {movie.rating}</div>
+          
+          <div className='unlike'>🤍</div>
+          <div className='like'>❤</div>
         </DetailWrapper>
       </Wrapper>
       {movie.overview && <StoryWrapper>

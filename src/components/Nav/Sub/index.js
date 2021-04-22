@@ -27,7 +27,6 @@ function Sub() {
   const dispatch = useDispatch();
 
   const typeChange = (e) => {
-    console.log(e.target.id);
     dispatch({
       type: LOAD_MOVIES_REQUEST,
       data: e.target.id,

@@ -48,9 +48,9 @@ function Search() {
       </Header>
       <Section>
         <Row gutter={[40,40]}>
-          {movies.map((movie,i) => {
+          {movies.map((movie) => {
             return (
-              <SearchCard key={i} movie={movie}/>
+              <SearchCard key={movie.id} movie={movie}/>
             );
           })}
         </Row>

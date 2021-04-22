@@ -80,5 +80,7 @@ const StoryWrapper = styled.div`
     font-size: 16px;
   }
 `;
+const LikeButton = styled.div`
+`;
 
-export { Wrapper,DetailWrapper,StoryWrapper,PosterWrapper,Poster };
+export { Wrapper,DetailWrapper,StoryWrapper,PosterWrapper,Poster,LikeButton };
