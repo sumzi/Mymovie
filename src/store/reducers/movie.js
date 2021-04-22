@@ -1,7 +1,6 @@
 import produce from "immer";
 
 const initialState = {
-  likes: null,
   movies: [],
   movieType: "",
   backgroundImage: "",
