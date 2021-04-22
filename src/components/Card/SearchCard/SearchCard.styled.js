@@ -9,19 +9,31 @@ const CardWrapper = styled.div`
   @media ${device.tablet} {
     padding: 30px;
   }
-
+  &:hover{
+    box-shadow: 0 0 20px white;
+  }
 `;
 const Poster = styled.div`
-  width: 120px;
-  height: 180px;
-  img {
-    width: 100%;
-    height: 100%;
+  div {
+    background-color: gray;
+    width: 120px;
+    height: 180px;
     border-radius: 20px;
+
+    @media ${device.tablet} {
+      width: 160px;
+      height: 240px;
+    }
   }
-  @media ${device.tablet} {
-    width: 160px;
-    height: 240px;
+  img {
+    width: 120px;
+    height: 180px;
+    border-radius: 20px;
+
+    @media ${device.tablet} {
+      width: 160px;
+      height: 240px;
+    }
   }
   &:hover{
     opacity: 0.5;
@@ -29,7 +41,8 @@ const Poster = styled.div`
 `;
 const Detail = styled.div`
   margin-left: 20px;
-  max-width: 180px;
+  max-width: 100%;
+  //border: 1px solid blue;
   @media ${device.tablet} {
     margin-left: 30px;
   }

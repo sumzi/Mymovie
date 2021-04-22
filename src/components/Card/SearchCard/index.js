@@ -10,10 +10,10 @@ function SearchCard({movie}) {
       <Link to={`/about/${movie.id}`}>
         <CardWrapper>
           <Poster>
-            <img
+            {movie.poster_path !== null ? <img
               src={`${IMAGE_BASE_URL}w300${movie.poster_path}`}
               alt={movie.title}
-            />
+            /> : <div/>}
           </Poster>
           <Detail>
             <div className="title">{movie.title}</div>
