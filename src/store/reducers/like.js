@@ -2,21 +2,11 @@ import produce from 'immer';
 
 const initialState = {
   movies: [{
-    id: '1',
+    id: '244786',
     title: '위플래쉬',
     poster_path: '/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
     backdrop_path: '/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
-  },{
-    id: '2',
-    title: '위플래쉬',
-    poster_path: '/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
-    backdrop_path: '/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
-  },{
-    id: '3',
-    title: '위플래쉬',
-    poster_path: null,
-    backdrop_path: '/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
-  }],
+  },],
   likeMovieLoading: false,
   likeMovieDone: false,
   likeMovieError: null,
@@ -44,12 +34,7 @@ const reducer = (state = initialState, action) =>
       case LIKE_MOVIE_SUCCESS: {
         draft.likeMovieLoading = false;
         draft.likeMovieDone = true;
-        draft.movies.push({
-          id: action.data.id,
-          title: action.data.title,
-          poster_path: action.data.poster_path,
-          backdrop_path: action.data.backdrop_path,
-        })
+        draft.movies.push(action.data);
         break;
       }
       case LIKE_MOVIE_FAILURE:

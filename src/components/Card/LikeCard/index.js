@@ -20,7 +20,7 @@ function LikeCard({movie}) {
       <CardWrapper>
         <div>
           <Link to={`/about/${movie.id}`}>
-            <Poster className="image" Img={movie.poster_path}></Poster>
+            <Poster className="image" Img={movie.backdrop_path}></Poster>
           </Link>
         </div>
         <Detail>

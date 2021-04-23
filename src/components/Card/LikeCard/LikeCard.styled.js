@@ -34,7 +34,6 @@ const CardWrapper = styled.div`
 
 const Detail = styled.div`
   display: flex;
-  align-items: center;
 `;
 const LikeButton = styled.div`
   font-size: 30px;

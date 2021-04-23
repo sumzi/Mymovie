@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { SEARCH_MOVIES_REQUEST, INIT_SEARCH_MOVIES } from '../../store/reducers/search';
+import Nodata from '../../components/Nodata';
 import { Row } from 'antd';
 import 'antd/dist/antd.css';
 import { SearchWrapper, Header, Section, InputWrapper } from './Search.styled';
@@ -22,7 +23,7 @@ function Search() {
         type: INIT_SEARCH_MOVIES,
       });
     };
-  }, [])
+  }, []);
 
   const changeKeyword = (e) => {
     setWord(e.target.value);
@@ -46,7 +47,7 @@ function Search() {
         <InputWrapper><input type='text' placeholder='Search...' onChange={changeKeyword} value={word} onKeyPress={keyPress} /></InputWrapper>
         { keyword && <div>"{keyword}" 검색 결과</div>}
       </Header>
-      <Section>
+      {keyword ? <Section>
         <Row gutter={[40,40]}>
           {movies.map((movie) => {
             return (
@@ -54,7 +55,7 @@ function Search() {
             );
           })}
         </Row>
-      </Section>
+      </Section>:<Nodata />}
     </SearchWrapper>
     
   )
