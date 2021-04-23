@@ -53,13 +53,13 @@ const LikeButton = styled.div`
     }
   }
 `;
-const Title = styled.div` 
+const Title = styled.div`
   width: 100%;
-  height: 100%;
   font-weight: bold;
   font-size: 17px;
   color: black;
   text-align: center;
+  line-height: 50px;
   @media ${device.tablet} {
     font-size: 20px;
   }

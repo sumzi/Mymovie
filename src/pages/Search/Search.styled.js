@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 import { device } from '../../styles/variables';
 
+const Wrapper = styled.div`
+  min-height: 100vh;
+  position:relative;
+  padding-bottom: 100px;
+`;
 const SearchWrapper = styled.div`
   padding-top: 60px;
   width: 100%;
-
   @media ${device.tablet}{
     padding-top: 70px;
   }
@@ -43,4 +47,4 @@ const InputWrapper = styled.div`
     }
   }
 `;
-export { SearchWrapper, Header, Section, InputWrapper };
+export { SearchWrapper, Header, Section, InputWrapper,Wrapper };

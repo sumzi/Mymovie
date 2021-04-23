@@ -16,18 +16,21 @@ function AboutVideos() {
   };
   
   const opts = {
-    width: '100%',
+    width: "100%",
     playerVars: {
-      'origin': 'http://localhost:3000',
+      autoplay: 0,
+      controls: 0,
+      autohide: 1,
+      origin: "http://localhost:3000",
     },
-  }
+  };
   return (
     <VideosWrapper>
       <label>📹 동영상</label>
       <Slider {...settings}>
         {movie.videos.map((video,i) => (
           <VideoWrapper key={i}>
-            <YouTube videoId={video.path} opts={opts}/>
+            <YouTube videoId={video.path} opts={opts} />
           </VideoWrapper>
         ))}
       </Slider>

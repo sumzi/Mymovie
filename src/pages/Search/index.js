@@ -4,9 +4,9 @@ import { SEARCH_MOVIES_REQUEST, INIT_SEARCH_MOVIES } from '../../store/reducers/
 import Nodata from '../../components/Nodata';
 import { Row } from 'antd';
 import 'antd/dist/antd.css';
-import { SearchWrapper, Header, Section, InputWrapper } from './Search.styled';
+import { SearchWrapper, Header, Section, InputWrapper, Wrapper } from './Search.styled';
 import { SearchCard } from '../../components/Card';
-
+import  Footer from '../../components/Footer';
 function Search() {
   const dispatch = useDispatch();
   const { movies } = useSelector(state => state.search);
@@ -42,23 +42,37 @@ function Search() {
     }
   };
   return (
-    <SearchWrapper>
-      <Header>
-        <InputWrapper><input type='text' placeholder='Search...' onChange={changeKeyword} value={word} onKeyPress={keyPress} /></InputWrapper>
-        { keyword && <div>"{keyword}" 검색 결과</div>}
-      </Header>
-      {keyword ? <Section>
-        <Row gutter={[40,40]}>
-          {movies.map((movie) => {
-            return (
-              <SearchCard key={movie.id} movie={movie}/>
-            );
-          })}
-        </Row>
-      </Section>:<Nodata />}
-    </SearchWrapper>
-    
-  )
+    <Wrapper>
+      <SearchWrapper>
+        <Header>
+          <InputWrapper>
+            <input
+              type="text"
+              placeholder="Search..."
+              onChange={changeKeyword}
+              value={word}
+              onKeyPress={keyPress}
+            />
+          </InputWrapper>
+          {keyword && <div>"{keyword}" 검색 결과</div>}
+        </Header>
+        <div>
+          {keyword ? (
+            <Section>
+              <Row gutter={[40, 40]}>
+                {movies.map((movie) => {
+                  return <SearchCard key={movie.id} movie={movie} />;
+                })}
+              </Row>
+            </Section>
+          ) : (
+            <Nodata />
+          )}
+        </div>
+      </SearchWrapper>
+      <Footer />
+    </Wrapper>
+  );
 }
 
 export default Search;

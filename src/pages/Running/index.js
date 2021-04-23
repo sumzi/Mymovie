@@ -3,10 +3,10 @@ import { IMAGE_BASE_URL } from "../../Config";
 import Sub from '../../components/Nav/Sub';
 import { useDispatch, useSelector } from "react-redux";
 import { LOAD_MOVIES_REQUEST } from "../../store/reducers/movie";
-import { BackgroundImg, MovieWrapper } from "./Running.styled";
+import { BackgroundImg, MovieWrapper,Wrapper } from "./Running.styled";
 import { Row } from "antd";
 import { RunningCard } from '../../components/Card';
-
+import Footer from '../../components/Footer';
 function Movie() {
   const dispatch = useDispatch();
   const { movies, movieType, backgroundImage } = useSelector((state) => state.movie);
@@ -21,7 +21,7 @@ function Movie() {
   }, []); 
 
   return (
-    <>
+    <Wrapper>
       <Sub />
       {backgroundImage && <BackgroundImg bgPath={`${IMAGE_BASE_URL}w1280${backgroundImage}`}/>}
       <MovieWrapper>
@@ -42,7 +42,8 @@ function Movie() {
             ))}
         </Row>
       </MovieWrapper>
-    </>
+      <Footer/>
+    </Wrapper>
   );
 }
 

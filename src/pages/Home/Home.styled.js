@@ -66,4 +66,19 @@ const Wrapper = styled.div`
 }
 `;
 
-export { BackgroundImg, Detail, Wrapper };
+const FooterWrapper = styled.div`
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.4;
+  font-size: 17px;
+  label {
+    margin: 0 9px;
+  }
+  a{
+    color: white;
+  }
+`;
+
+export { BackgroundImg, Detail, Wrapper, FooterWrapper };

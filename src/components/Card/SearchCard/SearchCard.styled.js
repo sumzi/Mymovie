@@ -28,7 +28,6 @@ const Poster = styled.div`
   img {
     width: 120px;
     height: 180px;
-    border-radius: 20px;
 
     @media ${device.tablet} {
       width: 160px;

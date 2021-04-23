@@ -1,13 +1,8 @@
 import styled from 'styled-components';
 import { device } from '../../styles/variables';
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
 const AboutWrapper = styled.div`
-  float: right;
+  margin-left: auto;
   width: 100%;
   padding: 20px 30px;
   margin-top: 60px;
@@ -47,4 +42,10 @@ const BackgroundImg = styled.div`
     bottom: 0;
   }
 `;
-export { Wrapper, AboutWrapper, BackgroundImg };
+const Wrapper = styled.div`
+  min-height: 100%;
+  position:relative;
+  padding-bottom: 100px;
+`;
+
+export { AboutWrapper, BackgroundImg, Wrapper };

@@ -6,6 +6,7 @@ const LikeWrapper = styled.div`
   @media ${device.tablet}{
     padding-top: 70px;
   }
+  
 `;
 const Header = styled.div`
   text-align: center;
@@ -21,5 +22,10 @@ const Section = styled.div`
     width: 80%;
   }
 `;
+const Wrapper = styled.div`
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px;
+`;
 
-export { LikeWrapper, Header, Section };
+export { LikeWrapper, Header, Section,Wrapper };

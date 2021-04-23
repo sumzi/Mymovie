@@ -5,7 +5,7 @@ import {
   DETAIL_MOVIE_SUCCESS,
   DETAIL_MOVIE_FAILURE,
 } from '../reducers/about';
-import  { API_URL, API_KEY, YOUTUBE_PATH } from '../../Config';
+import  { API_URL, API_KEY } from '../../Config';
 
 const getMovieDetail = async (id)=> {
   const result = await axios.get(`${API_URL}movie/${id}?api_key=${API_KEY}&language=ko-KR`);

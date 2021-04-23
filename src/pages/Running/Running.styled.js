@@ -31,18 +31,16 @@ const BackgroundImg = styled.div`
 `;
 
 const MovieWrapper = styled.div`
-  //border: 2px solid red;
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  top: 100px;
   padding: 20px;
   margin: 0 20px;
   @media ${device.tablet} {
     margin: 0 50px;
   }
 `;
+const Wrapper = styled.div`
+  min-height: 100%;
+  position:relative;
+  padding-bottom: 100px;
+`;
 
-
-export { BackgroundImg, MovieWrapper };
+export { BackgroundImg, MovieWrapper, Wrapper };
