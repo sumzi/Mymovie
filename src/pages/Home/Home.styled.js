@@ -29,10 +29,9 @@ const BackgroundImg = styled.div`
 `;
 
 const Detail = styled.div`
-  //border: 2px solid yellow;
   position: absolute;
   width: 100%;
-  bottom: 80px;
+  bottom: 100px;
   text-shadow: 2px 2px 2px black;
   text-align: center;
   padding: 0 30px;
@@ -47,8 +46,7 @@ const Detail = styled.div`
 
   @media ${device.tablet} {
     text-align: left;
-    padding: 0 80px;
-    bottom: 80px;
+    padding: 0 120px;
     width: 70%;
     p:nth-child(1) {
       font-size: 35px;
@@ -59,7 +57,6 @@ const Detail = styled.div`
   }
 `;
 const Wrapper = styled.div`
-  //border: 1px solid red;
   display: none;
   @media ${device.tablet} {
     display: block;
@@ -67,8 +64,10 @@ const Wrapper = styled.div`
 `;
 
 const FooterWrapper = styled.div`
+  height: 100px;
+  line-height: 100px;
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   width: 100%;
   text-align: center;
   opacity: 0.4;
