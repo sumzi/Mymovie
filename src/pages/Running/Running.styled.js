@@ -24,23 +24,35 @@ const BackgroundImg = styled.div`
   right: 0;
   bottom: 0;
   transition: .5s;
-  opacity: 0.6;
+  opacity: 0.5;
   @media ${device.tablet} {
     top: 70px;
   }
 `;
 
 const MovieWrapper = styled.div`
-  padding: 20px;
+  //border: 10px solid red;
+  padding-top:60px;
+  padding: 0 20px;
   margin: 0 20px;
+  margin-bottom: 50px;
   @media ${device.tablet} {
-    margin: 0 50px;
+    max-width: 1200px;
+    margin-bottom: 50px;
   }
 `;
 const Wrapper = styled.div`
+  margin-top: 60px;
+  //border: 10px solid blue;
   min-height: 100%;
-  position:relative;
-  padding-bottom: 100px;
+  position: relative;
+
+  @media ${device.tablet} {
+    margin-top: 70px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-around;
+  }
 `;
 
 export { BackgroundImg, MovieWrapper, Wrapper };
