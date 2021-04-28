@@ -6,7 +6,12 @@ const initialState = {
     title: '위플래쉬',
     poster_path: '/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
     backdrop_path: '/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
-  },],
+  },{
+    id: '313369',
+    title: '라라랜드',
+    poster_path: '/6v4g6yW01uTmbxqwg75iEkMkrNP.jpg',
+    backdrop_path: '/qJeU7KM4nT2C1WpOrwPcSDGFUWE.jpg',
+  }],
   likeMovieLoading: false,
   likeMovieDone: false,
   likeMovieError: null,
