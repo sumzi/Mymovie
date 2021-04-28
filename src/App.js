@@ -3,6 +3,19 @@ import { Route, Switch } from 'react-router-dom';
 import { Home, Running, Search, Like, About } from './pages/index';
 import { Main } from './components/Nav';
 import GlobalStyle from './styles/global';
+import { BackTop } from 'antd';
+import 'antd/dist/antd.css';
+
+const style = {
+  height: 40,
+  width: 40,
+  lineHeight: '40px',
+  borderRadius: 4,
+  backgroundColor: '#1088e9',
+  color: '#fff',
+  textAlign: 'center',
+  fontSize: 14,
+};
 
 function App() {
   return (
@@ -16,6 +29,9 @@ function App() {
         <Route path='/search' component={Search} />
         <Route path='/like' component={Like} />
       </Switch>
+      <BackTop>
+        <div style={style}>UP</div>
+      </BackTop>
     </>
   );
 }
