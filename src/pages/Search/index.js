@@ -10,20 +10,14 @@ import  Footer from '../../components/Footer';
 function Search() {
   const dispatch = useDispatch();
   const { movies } = useSelector(state => state.search);
-  const [keyword, setKeyword] = useState('마블');
+  const [keyword, setKeyword] = useState('');
   const [word, setWord] = useState('');
 
   useEffect(() => {
     dispatch({
-      type: SEARCH_MOVIES_REQUEST,
-      data: '마블',
+      type: INIT_SEARCH_MOVIES,
     });
-    return () => {
-      dispatch({
-        type: INIT_SEARCH_MOVIES,
-      });
-    };
-  }, []);
+  }, [dispatch]);
 
   const changeKeyword = (e) => {
     setWord(e.target.value);
@@ -31,7 +25,7 @@ function Search() {
 
   const keyPress = (e) => {
     if (e.key === "Enter") {
-      if (word) {
+      if (word!=='') {
         dispatch({
           type: SEARCH_MOVIES_REQUEST,
           data: word,

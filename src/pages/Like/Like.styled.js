@@ -6,7 +6,6 @@ const LikeWrapper = styled.div`
   @media ${device.tablet}{
     padding-top: 70px;
   }
-  
 `;
 const Header = styled.div`
   text-align: center;
@@ -15,11 +14,12 @@ const Header = styled.div`
 
 `;
 const Section = styled.div`
-  padding: 30px;
+  padding: 30px 10px;
   margin: 0 auto;
   @media ${device.tablet} {
-    padding: 40px 0;
-    width: 80%;
+    padding: 40px 10px;
+    max-width: 1200px;
+    min-width: 768px;
   }
 `;
 const Wrapper = styled.div`

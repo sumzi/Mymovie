@@ -14,7 +14,7 @@ function Like() {
         <Header>좋아하는 영화</Header>
         {movies.length > 0 ? (
           <Section>
-            <Row gutter={[30, 60]}>
+            <Row gutter={[20, 30]}>
               {movies.map((movie) => {
                 return <LikeCard key={movie.id} movie={movie} />;
               })}

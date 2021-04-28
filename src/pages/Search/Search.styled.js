@@ -22,19 +22,19 @@ const Header = styled.div`
   }
 `;
 const Section = styled.div`
-  padding: 30px 0;
   margin: 0 auto;
   width: 85%;
+  padding: 20px 0;
   @media ${device.tablet} {
     padding: 40px 0;
-    width: 80%;
+    max-width: 1200px;
+    min-width: 768px;
   }
 
 `;
 const InputWrapper = styled.div`
   text-align: center;
   input{
-    border:none;
     outline:none;
     height:40px;
     border-radius: 22px;

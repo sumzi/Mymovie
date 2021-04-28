@@ -85,18 +85,6 @@ const LikeButton = styled.div`
     font-size: 30px;
     display: inline;
     cursor: pointer;
-    .hidden_like {
-      display: none;
-    }
-
-    &:hover {
-      .visible_like {
-        display: none;
-      }
-      .hidden_like {
-        display: inline;
-      } 
-    }
   }
   
 `;

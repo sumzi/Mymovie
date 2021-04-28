@@ -60,13 +60,11 @@ function AboutStory() {
               {liked ? (
                 <div onClick={unlikeButton}>
                   {/* 이미 좋아하는 영화 */}
-                  <div className="visible_like">❤</div>
-                  <div className="hidden_like">💔</div>
+                  <div>❤</div>
                 </div>
               ) : (
                 <div onClick={likeButton}>
-                  <div className="visible_like">🤍</div>
-                  <div className="hidden_like" >❤</div>
+                  <div>🤍</div>
                 </div>
               )}
             </div>

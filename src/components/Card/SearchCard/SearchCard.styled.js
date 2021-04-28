@@ -11,6 +11,9 @@ const CardWrapper = styled.div`
   }
   &:hover{
     box-shadow: 0 0 20px white;
+    img {
+      opacity: 0.5;
+    }
   }
 `;
 const Poster = styled.div`
@@ -18,7 +21,6 @@ const Poster = styled.div`
     background-color: gray;
     width: 120px;
     height: 180px;
-    border-radius: 20px;
 
     @media ${device.tablet} {
       width: 160px;
@@ -34,14 +36,10 @@ const Poster = styled.div`
       height: 240px;
     }
   }
-  &:hover{
-    opacity: 0.5;
-  }
 `;
 const Detail = styled.div`
   margin-left: 20px;
   max-width: 100%;
-  //border: 1px solid blue;
   @media ${device.tablet} {
     margin-left: 30px;
   }

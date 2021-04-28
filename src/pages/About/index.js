@@ -18,7 +18,7 @@ function About(props) {
       type: DETAIL_MOVIE_REQUEST,
       data: movieId,
     });
-  }, []);
+  }, [dispatch, movieId]);
   
   return (
     <Wrapper>

@@ -17,7 +17,7 @@ function Home() {
     dispatch({
       type: HOME_MOVIE_REQUEST,
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

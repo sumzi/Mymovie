@@ -7,19 +7,19 @@ const AboutWrapper = styled.div`
   padding: 20px 30px;
   margin-top: 60px;
   @media ${device.tablet} {
-    width: 750px;
+    width: 780px;
     margin-top: 70px; 
-    padding: 30px 50px;
+    padding: 30px 80px;
   }
 `;
 
 const BackgroundImg = styled.div`
   display: none;
-  z-index: -1;
+  z-index:-1;
   @media ${device.tablet}{
     display: block;
     border: 2px soid blue;
-    width: 50%;
+    width: 55%;
     background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0) 20%,

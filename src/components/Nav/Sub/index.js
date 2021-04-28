@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SubWrapper, Menu } from "./Sub.styled";
 import { LOAD_MOVIES_REQUEST } from "../../../store/reducers/movie";
 
 const menuType = [
   {
-    type: "Now Playing",
+    type: "Now",
     path: "movie/now_playing",
   },
   {
@@ -23,22 +23,23 @@ const menuType = [
 ];
 
 function Sub() {
-  const { movieType } = useSelector(state => state.movie)
+  const { movieId } = useSelector(state => state.movie);
   const dispatch = useDispatch();
 
-  const typeChange = (e) => {
+  const typeChange = useCallback((e) => {
     dispatch({
       type: LOAD_MOVIES_REQUEST,
       data: e.target.id,
     });
-  };
+
+  }, [dispatch]);
 
   
   return (
     <SubWrapper>
       {menuType.map((v,i) => {
         return (
-          <Menu onClick={typeChange} key={i} id={i} flag={movieType === v.type ? 1 : 0}>{v.type}</Menu>
+          <Menu onClick={typeChange} key={i} id={i} flag={movieId === i ? 1 : 0}>{v.type}</Menu>
         )
       })}
       

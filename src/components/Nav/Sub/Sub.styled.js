@@ -2,23 +2,25 @@ import styled from 'styled-components';
 import { device } from '../../../styles/variables';
 
 const SubWrapper = styled.div`
-  margin-top: 60px;
+  //border: 10px solid yellow;
+  height: 50px;
+  line-height: 50px;
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-  height: 50px;
-  width: 100%;
-  line-height: 50px;
+  padding: 0 10px;
+
   @media ${device.tablet} {
-    margin-top: 70px;
-    padding: 0 100px;
-    height: 50px;
-    line-height: 50px;
+    padding: 10px;
+    height: 100%;
+    position: relative;
+    width: 300px;
   }
 `;
 
 const Menu = styled.div`
-  z-index:10;
+  //border: 5px solid white;
+  z-index: 10;
   cursor: pointer;
   color: ${props => props.flag?'white':'gray'};
   font-weight: bold;
@@ -28,7 +30,10 @@ const Menu = styled.div`
     transition: .2s;
   }
   @media ${device.tablet} {
+    margin: 10px;
+    width: 100%;
     font-size: 28px;
+    text-align: left;
   }
 `;
 
