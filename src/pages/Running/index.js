@@ -13,11 +13,13 @@ function Movie() {
   const { movies, movieId, page, hasMoreMovies, backgroundImage, addPostsLoading } = useSelector((state) => state.movie);
 
   useEffect(() => {
-    dispatch({
-      type: LOAD_MOVIES_REQUEST,
-      data: 0,
-    });
-  }, [dispatch]); 
+    if (movieId === null){
+      dispatch({
+        type: LOAD_MOVIES_REQUEST,
+        data: 0,
+      });
+    }
+  }, [dispatch, movieId]); 
 
   
   useEffect(() => {

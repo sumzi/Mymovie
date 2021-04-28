@@ -2,7 +2,7 @@ import produce from "immer";
 
 const initialState = {
   movies: [],
-  movieId: 0,
+  movieId: null,
   page: 1,
   hasMoreMovies: true,
   backgroundImage: "",
