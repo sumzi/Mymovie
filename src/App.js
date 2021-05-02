@@ -30,7 +30,7 @@ function App() {
         <Route path='/like' component={Like} />
       </Switch>
       <BackTop>
-        <div style={style}>UP</div>
+        <div style={style}>▲</div>
       </BackTop>
     </>
   );
