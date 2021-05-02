@@ -8,6 +8,8 @@ const LikeWrapper = styled.div`
   }
 `;
 const Header = styled.div`
+  border: 10px solid blue;
+  height: 150px;
   text-align: center;
   font-size: 24px;
   padding: 10px;

@@ -1,61 +1,5 @@
 import styled from 'styled-components';
 import { device } from '../../styles/variables';
-
-const BackgroundImg = styled.div`
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0) 80%,
-    rgba(0, 0, 0, 0.25) 85%,
-    rgba(0, 0, 0, 0.5) 90%,
-    rgba(0, 0, 0, 0.75) 95%,
-    rgba(0, 0, 0, 1) 100%
-  ),linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.25) 70%,
-    rgba(0, 0, 0, 0.5) 80%,
-    rgba(0, 0, 0, 0.75) 90%,
-    rgba(0, 0, 0, 1) 100%
-  ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`};  
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  @media ${device.tablet} {
-    top: 70px;
-  }
-`;
-
-const Detail = styled.div`
-  position: absolute;
-  width: 100%;
-  bottom: 100px;
-  text-shadow: 2px 2px 2px black;
-  text-align: center;
-  padding: 0 30px;
-
-  p:nth-child(1) {
-    font-style: italic;
-    font-size: 25px;
-  }
-  p:nth-child(2) {    
-    font-size: 20px;
-  }
-
-  @media ${device.tablet} {
-    text-align: left;
-    padding: 0 120px;
-    width: 70%;
-    p:nth-child(1) {
-      font-size: 35px;
-    }
-    p:nth-child(2) {    
-      font-size: 30px;
-    }
-  }
-`;
 const Wrapper = styled.div`
   display: none;
   @media ${device.tablet} {
@@ -63,21 +7,89 @@ const Wrapper = styled.div`
 }
 `;
 
-const FooterWrapper = styled.div`
-  height: 100px;
-  line-height: 100px;
+const Head = styled.div`
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  @media ${device.tablet} {
+  }
+`;
+
+const Background = styled.div`
+  position: relative;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.25) 70%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0.75) 90%,
+    rgba(0, 0, 0, 1) 100%
+  ),linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.25) 70%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0.75) 90%,
+    rgba(0, 0, 0, 1) 100%
+  ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`};  
+  background-size: cover;
+  height: 100vh;
+  padding-top: 60px;
+  @media ${device.tablet} {
+    padding-top: 70px;
+  }
+`; 
+
+const Detail = styled.div`
+
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  left:0;
+  right:0;
+  bottom: 100px;
+  text-shadow: 2px 2px 2px black;
+  color: white;
   text-align: center;
-  opacity: 0.4;
+  .title {
+    font-size: 20px;
+    color: white;
+  }
+  .original_title{
+    color: white;
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  @media ${device.tablet} {
+    left: 150px;
+    bottom: 150px;
+    text-align: left;
+    .title {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .original_title{
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+`;
+
+const Section = styled.div`
+  margin-top: 50px;
+  padding: 50px;
+  color: gray;
+  text-align: center;
+  font-size: 15px;
+`;
+const Footer = styled.div`
+  padding: 50px;
+  text-align: center;
   font-size: 17px;
   label {
     margin: 0 9px;
   }
   a{
-    color: white;
+    color: gray;
   }
 `;
 
-export { BackgroundImg, Detail, Wrapper, FooterWrapper };
+export {  Detail, Wrapper,Section, Footer, Head, Background };

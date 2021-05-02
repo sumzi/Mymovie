@@ -37,7 +37,7 @@ const BackgroundImg = styled.div`
     ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`}; 
     background-size: cover;
     position: fixed;
-    top: 70px;
+    top: 0px;
     left: 0;
     bottom: 0;
   }

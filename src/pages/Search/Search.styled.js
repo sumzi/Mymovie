@@ -35,6 +35,7 @@ const Section = styled.div`
 const InputWrapper = styled.div`
   text-align: center;
   input{
+    background-color: #D9D9D9;
     outline:none;
     height:40px;
     border-radius: 22px;
