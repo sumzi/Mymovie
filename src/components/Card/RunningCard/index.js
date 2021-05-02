@@ -11,12 +11,15 @@ function RunningCard(movie) {
   const mouseEnter = () => {
     dispatch({
       type: BACKGROUND_IMAGE_REQUEST,
-      data: movie.movieBgImg
+      data:{
+        title: movie.movieTitle,
+        backdrop_path: movie.movieBgImg,
+      } 
     });
   };
   
   return (
-      <Col lg={8} md={12} xs={24}>
+      <Col lg={6} md={8} xs={24}>
         <CardWrapper>
           <Link to={`/about/${movie.movieId}`}>
             {movie.image ? (

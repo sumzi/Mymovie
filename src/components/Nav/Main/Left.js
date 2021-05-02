@@ -1,5 +1,5 @@
 import React from 'react'
-import movie from '../../../images/movie.png';
+import movie from '../../../images/mymovie.png';
 import { Link } from 'react-router-dom';
 import { LeftWrapper, Logo } from './Main.styled';
 

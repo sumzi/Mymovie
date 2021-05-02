@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 const CardWrapper = styled.div`
-  padding: 20px;
+  height: 100%;
   img {
-    border-radius: 20px;
     width: 100%;
     height: 100%;
+    mix-blend-mode: normal;
     &:hover {
-      transform: scale(1.1);   
       transition: .8s;
-      box-shadow: 0 0 20px white;
+      mix-blend-mode: luminosity;
     }
   }
 

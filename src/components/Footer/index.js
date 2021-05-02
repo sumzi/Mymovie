@@ -3,6 +3,7 @@ import { GithubOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.div`
+  color: gray;
   height: 100px;
   line-height: 100px;
   width: 100%;
@@ -24,8 +25,7 @@ const FooterWrapper = styled.div`
 function Footer() {
   return (
     <FooterWrapper>
-      <a href='https://github.com/sumzi/Movie'><GithubOutlined /></a>
-      <label>sumzi</label>
+      <a href='https://github.com/sumzi/Movie'><GithubOutlined /> sumzi</a>
     </FooterWrapper>
   )
 }

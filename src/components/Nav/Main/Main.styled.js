@@ -7,10 +7,10 @@ const MainWrapper = styled.div`
   top: 0;
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: white;
   padding: 0 30px;
   @media ${device.tablet} {
-    padding: 0 50px;
+    padding: 0 100px;
     height: 70px;
     div {
       line-height: 70px;
@@ -26,26 +26,29 @@ const LeftWrapper = styled.div`
   line-height: 60px;
 `;
 const RightWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 140px;
-  @media ${device.tablet} {
-    width: 180px;
-  }
-  div {
-    color: white;
-    font-size: 27px;
-    line-height: 60px;
+  .pc {
+    display: none;
     @media ${device.tablet} {
+      display: flex;
+      justify-content: space-between;
+      width: 210px;
       font-size: 35px;
       line-height: 70px;
+    }
+  }
+  .mobile {
+    display: block;
+    font-size: 24px;
+    line-height: 60px;
+    @media ${device.tablet} {
+      display: none;
     }
   }
 `;
 const Logo = styled.div`
   width: 80px;
   @media ${device.tablet} {
-    width: 120px;
+    width: 140px;
   }
   img {
     width: 100%;
@@ -53,4 +56,8 @@ const Logo = styled.div`
   z-index: 21;
 `;
 
-export { MainWrapper, LeftWrapper, RightWrapper, Logo };
+const IconWrapper = styled.div`
+  color: black;
+`;
+
+export { MainWrapper, LeftWrapper, RightWrapper, Logo,IconWrapper };
