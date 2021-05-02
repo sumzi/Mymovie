@@ -44,7 +44,10 @@ const reducer = (state = initialState, action) =>
         draft.movies = action.data;
         draft.page = 1;
         draft.hasMoreMovies = true;
-        draft.backgroundImage = action.data[0].backdrop_path;
+        draft.backgroundImage = {
+          title: action.data[0].title,
+          backdrop_path:action.data[0].backdrop_path
+        };
         break;
       }
       case LOAD_MOVIES_FAILURE:
@@ -61,7 +64,7 @@ const reducer = (state = initialState, action) =>
         draft.addMoviesDone = true;
         draft.page = action.page;
         draft.movies = draft.movies.concat(action.data);
-        draft.hasMoreMovies = draft.page < 4;
+        // draft.hasMoreMovies = draft.page < 4;
         break;
       }
       case ADD_MOVIES_FAILURE:

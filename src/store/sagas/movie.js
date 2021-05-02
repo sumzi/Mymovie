@@ -34,8 +34,8 @@ const menuType = [
 
 async function loadMoviesAPI(data) {
   const result = await axios.get(`${API_URL}${menuType[data].path}?api_key=${API_KEY}&language=ko-KR&page=1`);
-
-  const movies = result.data.results.map(movie => {
+  const tmp = result.data.results.filter(movie => movie.poster_path !== null);
+  const movies = tmp.map((movie) => {
     return {
       id: movie.id,
       title: movie.title,
@@ -62,8 +62,19 @@ function* loadMovies(action) {
   }
 }
 
-function addMoviesAPI(data){
-  return axios.get(`${API_URL}${menuType[data.movieId].path}?api_key=${API_KEY}&language=ko-KR&page=${data.page}`);
+async function addMoviesAPI(data){
+  const result = await axios.get(`${API_URL}${menuType[data.movieId].path}?api_key=${API_KEY}&language=ko-KR&page=${data.page}`);
+  const tmp = result.data.results.filter(movie => movie.poster_path !== null);
+  const movies = tmp.map((movie) => {
+    return {
+      id: movie.id,
+      title: movie.title,
+      poster_path: movie.poster_path,
+      backdrop_path: movie.backdrop_path,
+    };
+  });
+
+  return movies;
 }
 
 function* addMovies(action) {
@@ -71,7 +82,7 @@ function* addMovies(action) {
     const result = yield call(addMoviesAPI, action.data);
     yield put({
       type: ADD_MOVIES_SUCCESS,
-      data: result.data.results,
+      data: result,
       movieId: action.data.movieId,
       page: action.data.page
     });
