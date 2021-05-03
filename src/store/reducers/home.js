@@ -2,7 +2,7 @@ import produce from 'immer';
 
 const initialState = { 
   movies: [], 
-  darkMode : false,
+  darkMode : 0,
   homeMovieLoading: false,
   homeMovieDone: false,
   homeMovieError: null,

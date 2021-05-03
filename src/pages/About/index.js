@@ -11,6 +11,7 @@ import Footer from '../../components/Footer';
 function About(props) {
   const dispatch = useDispatch();
   const { detailMovieLoading, movie, detailMovieDone } = useSelector((state) => state.about);
+  const { darkMode } = useSelector(state => state.home);
   const movieId = props.match.params.movieId;
 
   useEffect(() => {
@@ -34,7 +35,7 @@ function About(props) {
             <Row>{movie.images.length > 0 && <AboutImages />}</Row>
             <Row>{movie.videos.length > 0 && <AboutVideos />}</Row>
 
-            {detailMovieDone && <BackgroundImg bgPath={movie.images[1]?`${IMAGE_BASE_URL}original${movie.images[1]}`:`${IMAGE_BASE_URL}original${movie.backdrop_path}`} />} 
+            {detailMovieDone && <BackgroundImg mode={darkMode} bgPath={movie.images[1]?`${IMAGE_BASE_URL}original${movie.images[1]}`:`${IMAGE_BASE_URL}original${movie.backdrop_path}`} />} 
           
           </AboutWrapper>
           

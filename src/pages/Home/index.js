@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Loading from "../../components/Loading";
 import Slider from "react-slick";
-import  Footer from '../../components/Footer';
+import Footer from "../../components/Footer";
 
 const settings = {
   dots: true,
@@ -44,8 +44,9 @@ function Home() {
         <Wrapper>
           <Head>
             <Slider {...settings}>
-              {movies.map((movie) => (
+              {movies.map((movie, i) => (
                 <Background
+                  key={i}
                   bgPath={`${IMAGE_BASE_URL}original${movie.backdrop_path}`}
                 >
                   <Detail>

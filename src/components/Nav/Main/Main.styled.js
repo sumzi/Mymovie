@@ -10,8 +10,8 @@ const MainWrapper = styled.div`
   top: 0;
   display: flex;
   justify-content: space-between;
-  background-color: ${props => props.mode? `${dark.backgroundColor}`:`${light.backgroundColor}`};
-  padding: 0 30px;
+  background-color: ${props => props.mode===true ? `${dark.backgroundColor}`:`${light.backgroundColor}`};
+  padding: 0 28px;
   @media ${device.tablet} {
     padding: 0 100px;
     height: 70px;
@@ -34,14 +34,14 @@ const RightWrapper = styled.div`
     @media ${device.tablet} {
       display: flex;
       justify-content: space-between;
-      width: 210px;
+      width: 220px;
       font-size: 35px;
       line-height: 70px;
     }
   }
   .mobile {
     display: block;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 60px;
     @media ${device.tablet} {
       display: none;
@@ -59,4 +59,15 @@ const Logo = styled.div`
   z-index: 21;
 `;
 
-export { MainWrapper, LeftWrapper, RightWrapper, Logo,IconWrapper };
+const DrawerMenu = styled.div`
+  height: 60px;
+  margin: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  color: black;
+  label {
+    border-bottom: 3px solid red;
+  }
+`;
+export { MainWrapper, LeftWrapper, RightWrapper, Logo,IconWrapper, DrawerMenu };

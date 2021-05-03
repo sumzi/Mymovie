@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
 
   div {
     box-sizing: border-box;
-    color: ${props => props.mode ? `${dark.color}`:`${light.color}`};
   }
 
   a {

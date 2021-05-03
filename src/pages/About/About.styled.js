@@ -18,26 +18,25 @@ const BackgroundImg = styled.div`
   z-index:-1;
   @media ${device.tablet}{
     display: block;
-    border: 2px soid blue;
     width: 55%;
-    background: linear-gradient(
+    background: ${props => props.mode ? `linear-gradient(
       to right,
-      rgba(0, 0, 0, 0) 20%,
-      rgba(0, 0, 0, 0.25) 45%,
-      rgba(0, 0, 0, 0.5) 60%,
-      rgba(0, 0, 0, 0.75) 85%,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.25) 70%,
+      rgba(0, 0, 0, 0.5) 80%,
+      rgba(0, 0, 0, 0.75) 90%,
       rgba(0, 0, 0, 1) 100%
-    ),linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0) 80%,
-      rgba(0, 0, 0, 0.25) 85%,
-      rgba(0, 0, 0, 0.5) 90%,
-      rgba(0, 0, 0, 0.75) 95%,
-      rgba(0, 0, 0, 1) 100%
-    ), ${({ bgPath }) => `url(${bgPath}) center no-repeat`}; 
+    )` : `linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 80%,
+      rgba(255, 255, 255, 0.25) 85%,
+      rgba(255, 255, 255, 0.5) 90%,
+      rgba(255, 255, 255, 0.75) 95%,
+      rgba(255, 255, 255, 1) 100%
+    )`}, ${props => `url(${props.bgPath}) center no-repeat`}; 
     background-size: cover;
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
     bottom: 0;
   }

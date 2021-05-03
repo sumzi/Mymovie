@@ -4,9 +4,11 @@ const CardWrapper = styled.div`
   img {
     width: 100%;
   }
-  label {
+  div {
     font-size: 17px;
+    color: black;
   }
+  border: 1px solid white;
 `;
 
 

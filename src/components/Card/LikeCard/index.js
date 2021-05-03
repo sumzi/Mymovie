@@ -7,7 +7,6 @@ import { UNLIKE_MOVIE_REQUEST } from "../../../store/reducers/like";
 import { IMAGE_BASE_URL } from "../../../Config";
 import { HeartFilled } from "@ant-design/icons";
 import "antd/dist/antd.css";
-const { Meta } = Card;
 
 function LikeCard({ movie }) {
   const dispatch = useDispatch();
@@ -40,7 +39,7 @@ function LikeCard({ movie }) {
             />,
           ]}
         >
-          <label>{movie.title}</label>
+          <div>{movie.title}</div>
         </Card>
       </CardWrapper>
     </Col>
