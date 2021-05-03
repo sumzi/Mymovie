@@ -1,5 +1,5 @@
-export const primaryColor = 'black';
-export const secondaryColr = 'white';
+export const primaryColor = '#FF0000';
+export const secondaryColr = '#D9D9D9';
 
 const size = {
   mobile: '480px',
@@ -9,4 +9,14 @@ const size = {
 export const device = {
   mobile: `(min-width: ${size.mobile})`,
   tablet: `(min-width: ${size.tablet})`,
-}
+};
+
+export const light = {
+  color: 'black',
+  backgroundColor: 'white'
+};
+
+export const dark = {
+  color: 'white',
+  backgroundColor: 'black'
+};

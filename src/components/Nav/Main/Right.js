@@ -10,20 +10,23 @@ import {
 } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import { Switch, Dropdown, Menu } from 'antd';
+import { useSelector, useDispatch } from 'react-redux';
+import { CHANGE_MODE_REQUEST } from "../../../store/reducers/home";
 
-function Right() {
-  
+function Right({mode}) {
+  const dispatch = useDispatch();
+  const { darkMode, changeModeLoading } = useSelector(state => state.home);
   function onChange(checked) {
-    console.log(`switch to ${checked}`);
+    dispatch({
+      type: CHANGE_MODE_REQUEST,
+      data: checked
+    });
   }
 
-  const clickIcon = () => {
-
-  }
   const menu = (
     <Menu>
       <Menu.Item>
-        Dark mode <Switch defaultChecked onChange={onChange} />
+        Dark mode <Switch Checked={darkMode} onChange={onChange} loading={changeModeLoading} />
       </Menu.Item>
     </Menu>
   )
@@ -31,21 +34,21 @@ function Right() {
     <RightWrapper>
       <div className="pc">
         <Link to="/running">
-          <IconWrapper>
+          <IconWrapper mode={mode}>
             <VideoCameraOutlined />
           </IconWrapper>
         </Link>
         <Link to="/like">
-          <IconWrapper>
+          <IconWrapper mode={mode}>
             <HeartOutlined />
           </IconWrapper>
         </Link>
         <Link to="/search">
-          <IconWrapper>
+          <IconWrapper mode={mode}>
             <SearchOutlined />
           </IconWrapper>
         </Link>
-        <IconWrapper onClick={clickIcon}>
+        <IconWrapper mode={mode}>
           <Dropdown overlay={menu} placement="bottomRight">
             <MoreOutlined />
           </Dropdown>
@@ -53,8 +56,8 @@ function Right() {
 
       </div>
       <div className="mobile">
-        <IconWrapper>
-          <MenuOutlined style={{ color: "black" }}/>
+        <IconWrapper mode={mode}>
+          <MenuOutlined/>
         </IconWrapper>
       </div>
     </RightWrapper>

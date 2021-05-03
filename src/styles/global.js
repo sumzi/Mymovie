@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import {dark,light} from './variables';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -6,12 +7,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     height: 100%;
-    //background-color:;
     min-width: 330px;
+    background-color: ${props => props.mode ? `${dark.backgroundColor}`:`${light.backgroundColor}`};
+    color: ${props => props.mode ? `${dark.color}`:`${light.color}`};
   }
 
   div {
     box-sizing: border-box;
+    color: ${props => props.mode ? `${dark.color}`:`${light.color}`};
   }
 
   a {

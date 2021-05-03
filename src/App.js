@@ -5,6 +5,7 @@ import { Main } from './components/Nav';
 import GlobalStyle from './styles/global';
 import { BackTop } from 'antd';
 import 'antd/dist/antd.css';
+import { useSelector } from 'react-redux';
 
 const style = {
   height: 40,
@@ -18,9 +19,11 @@ const style = {
 };
 
 function App() {
+  const { darkMode } = useSelector(state => state.home);
+  
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle mode={darkMode}/>
       <Main />
       <Switch>
         <Route exact path='/' component={Home} />

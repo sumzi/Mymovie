@@ -1,13 +1,16 @@
 import styled from 'styled-components';
-import { device } from '../../../styles/variables';
+import { device,dark,light } from '../../../styles/variables';
 
+const IconWrapper = styled.div`
+  color: ${props => props.mode ? `${dark.color}`:`${light.color}`};
+`;
 const MainWrapper = styled.div`
   height: 60px;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: ${props => props.mode? `${dark.backgroundColor}`:`${light.backgroundColor}`};
   padding: 0 30px;
   @media ${device.tablet} {
     padding: 0 100px;
@@ -54,10 +57,6 @@ const Logo = styled.div`
     width: 100%;
   }
   z-index: 21;
-`;
-
-const IconWrapper = styled.div`
-  color: black;
 `;
 
 export { MainWrapper, LeftWrapper, RightWrapper, Logo,IconWrapper };
