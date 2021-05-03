@@ -9,7 +9,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="/Movie">
+    <BrowserRouter basename="/mymovie">
       <App />
     </BrowserRouter>
   </Provider>,
