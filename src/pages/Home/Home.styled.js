@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { device } from '../../styles/variables';
 const Wrapper = styled.div`
-  display: none;
-  @media ${device.tablet} {
-    display: block;
-}
+  position: relative;
+  min-height: 100vh;
+  
 `;
 
 const Head = styled.div`
@@ -41,7 +40,6 @@ const Background = styled.div`
 `; 
 
 const Detail = styled.div`
-
   position: absolute;
   left:0;
   right:0;
@@ -73,9 +71,8 @@ const Detail = styled.div`
   }
 `;
 
-const Section = styled.div`
-  margin-top: 50px;
-  padding: 50px;
+const Description = styled.div`
+  padding: 100px 30px;
   color: gray;
   text-align: center;
   font-size: 15px;
@@ -91,5 +88,4 @@ const Footer = styled.div`
     color: gray;
   }
 `;
-
-export {  Detail, Wrapper,Section, Footer, Head, Background };
+export {  Detail, Wrapper,Description, Footer, Head, Background };

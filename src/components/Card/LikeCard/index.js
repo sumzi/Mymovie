@@ -1,14 +1,18 @@
-import React from 'react';
-import { Col } from 'antd';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { CardWrapper, Poster, Detail, LikeButton, Title } from './LikeCard.styled';
-import { UNLIKE_MOVIE_REQUEST } from '../../../store/reducers/like';
+import React from "react";
+import { Col, Card } from "antd";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { CardWrapper } from "./LikeCard.styled";
+import { UNLIKE_MOVIE_REQUEST } from "../../../store/reducers/like";
+import { IMAGE_BASE_URL } from "../../../Config";
+import { HeartFilled } from "@ant-design/icons";
+import "antd/dist/antd.css";
+const { Meta } = Card;
 
-function LikeCard({movie}) {
+function LikeCard({ movie }) {
   const dispatch = useDispatch();
 
-  const likeButton = () => {
+  const likeClick = () => {
     dispatch({
       type: UNLIKE_MOVIE_REQUEST,
       data: movie.id,
@@ -16,20 +20,28 @@ function LikeCard({movie}) {
   };
 
   return (
-    <Col xs={12} md={8} lg={6}>
+    <Col xs={24} md={12} lg={8}>
       <CardWrapper>
-        <div>
-          <Link to={`/about/${movie.id}`}>
-            <Poster className="image" Img={movie.backdrop_path}></Poster>
-          </Link>
-        </div>
-        <Detail>
-          <LikeButton onClick={likeButton} >
-            <div className='like'>❤</div>
-            <div className='unlike'>💔</div>
-          </LikeButton>
-          <Title>{movie.title}</Title>
-        </Detail>
+        <Card
+          hoverable
+          cover={
+            <Link to={`/about/${movie.id}`}>
+              <img
+                alt={movie.title}
+                src={`${IMAGE_BASE_URL}w500${movie.backdrop_path}`}
+              />
+            </Link>
+          }
+          actions={[
+            <HeartFilled
+              key="like"
+              onClick={likeClick}
+              style={{ color: "red" }}
+            />,
+          ]}
+        >
+          <label>{movie.title}</label>
+        </Card>
       </CardWrapper>
     </Col>
   );

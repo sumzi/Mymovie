@@ -8,20 +8,31 @@ const LikeWrapper = styled.div`
   }
 `;
 const Header = styled.div`
-  border: 10px solid blue;
-  height: 150px;
+  background-color: #D9D9D9;
+  dispaly: relative;
+  padding: 30px 0;
   text-align: center;
-  font-size: 24px;
-  padding: 10px;
-
+  font-size: 17px;
+  
+  @media ${device.tablet}{
+    padding: 50px 0;
+    font-size: 24px;
+  }
+  .first {
+    color: red;
+    font-weight: bold;
+  }
+  .second {
+    color: black;
+    font-size: 17px;
+  }
 `;
 const Section = styled.div`
-  padding: 30px 10px;
+  padding: 30px;
   margin: 0 auto;
   @media ${device.tablet} {
-    padding: 40px 10px;
+    padding: 50px 100px;
     max-width: 1200px;
-    min-width: 768px;
   }
 `;
 const Wrapper = styled.div`

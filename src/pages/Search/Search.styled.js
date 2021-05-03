@@ -23,6 +23,7 @@ const Header = styled.div`
 
 const InputWrapper = styled.div`
   input {
+    color: black;
     text-align: center;
     width: 100%;
     height: 50px;
