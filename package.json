@@ -1,6 +1,6 @@
 {
-  "homepage":"https://sumzi.github.io/Movie",
-  "name": "react-movie",
+  "homepage":"https://sumzi.github.io/Mymovie",
+  "name": "react-mymovie",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
