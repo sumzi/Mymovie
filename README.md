@@ -1,7 +1,7 @@
 # 🎞MYMOVIE
 <br/>
 <p align='center'>
-  <img src='example/mymovie.png' width='200px'/>
+  <img src='images/mymovie.png' width='200px'/>
 </p>
 <br/>
 
@@ -50,15 +50,15 @@ src
 ## 💻 화면
 |Home page||
 |:---:|:---:|
-|<img src='example/home_pc.png' />|<img src='example/home_mobile.png' width='600px'/>|
+|<img src='images/home_pc.png' />|<img src='images/home_mobile.png' width='600px'/>|
 
 24시간 하루동안 유행하는 상위 4개의 영화를 carousel로 볼 수 있습니다.
 <br/>
 
 |Running page||
 |:---:|:---:|
-|<img src='example/running_pc.png' />|<img src='example/running_mobile.png' width='600px'/>|
-|<img src='example/running_pc_dark.png' />|<img src='example/running_mobile_dark.png' width='600px'/>|
+|<img src='images/running_pc.png' />|<img src='images/running_mobile.png' width='600px'/>|
+|<img src='images/running_pc_dark.png' />|<img src='images/running_mobile_dark.png' width='600px'/>|
 
 현재 상영영화, 인기영화, 등급 높은 영화, 개봉예정 영화를 둘러볼 수 있습니다.
 무한 스크롤을 이용해 스크롤이 일정 높이에 도달했을 때 영화 20개를 더 가져옵니다.
@@ -66,28 +66,28 @@ src
 
 |About page||
 |:---:|:---:|
-|<img src='example/about_pc.png' />|<img src='example/about_mobile.png' width='600px'/>|
+|<img src='images/about_pc.png' />|<img src='images/about_mobile.png' width='600px'/>|
 
 영화의 정보, 줄거리, 배우, 이미지, 동영상을 볼 수 있으며 🤍이모티콘을 클릭하여 관심 있는 영화를 저장할 수 있습니다.
 <br/>
 
 |Like page||
 |:---:|:---:|
-|<img src='example/like_pc.png' />|<img src='example/like_mobile.png' width='600px'/>|
+|<img src='images/like_pc.png' />|<img src='images/like_mobile.png' width='600px'/>|
 
 관심 있는 영화의 상세정보를 볼 수 있으며, 삭제할 수 있습니다.
 <br/>
 
 |Search page||
 |:---:|:---:|
-|<img src='example/search_pc.png' />|<img src='example/search_mobile.png' width='600px'/>|
+|<img src='images/search_pc.png' />|<img src='images/search_mobile.png' width='600px'/>|
 
 직접 검색하여 원하는 영화를 찾을 수 있습니다.
 <br/>
 
 |light mode|dark mode|
 |:---:|:---:|
-|<img src='example/light_mode.png' />|<img src='example/dark_mode.png' />|
+|<img src='images/light_mode.png' />|<img src='images/dark_mode.png' />|
 
 원하는 모드로 설정할 수 있습니다.
 <br/>
