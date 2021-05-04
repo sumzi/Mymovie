@@ -12,7 +12,7 @@ import {
 import { API_URL, API_KEY } from '../../Config';
 
 function homeMoviesAPI(){
-  return axios.get(`${API_URL}trending/movie/week?api_key=${API_KEY}&language=ko-KR`);
+  return axios.get(`${API_URL}trending/movie/day?api_key=${API_KEY}&language=ko-KR`);
 }
 
 function* homeMovie() {

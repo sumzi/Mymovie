@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   position:relative;
   padding: 50px;
+  background-color: black;
 `;
 const Header = styled.div`
   padding-top: 60px;
@@ -23,14 +24,14 @@ const Header = styled.div`
 
 const InputWrapper = styled.div`
   input {
-    color: black;
+    color: white;
     text-align: center;
     width: 100%;
     height: 50px;
-    outline-style:none;
+    outline-style: none;
     font-size: 20px;
-    border-radius: 30px;
-    background-color: #D9D9D9;
+    border: 1px solid white;
+    background-color: black;
   }
   margin-bottom: 10px;
 `;

@@ -29,7 +29,7 @@ const FooterWrapper = styled.div`
 function Footer() {
   return (
     <FooterWrapper>
-      <a href='https://github.com/sumzi/Movie'><GithubOutlined /> sumzi</a>
+      <a href='https://github.com/sumzi/Mymovie'><GithubOutlined /> sumzi</a>
     </FooterWrapper>
   )
 }

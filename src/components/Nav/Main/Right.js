@@ -18,7 +18,6 @@ function Right({ mode }) {
   const { darkMode, changeModeLoading } = useSelector((state) => state.home);
 
   function onChange(checked) {
-    console.log(checked)
     const tmp = checked ? 1 : 0;
     dispatch({
       type: CHANGE_MODE_REQUEST,
