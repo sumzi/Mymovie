@@ -10,7 +10,7 @@ const MainWrapper = styled.div`
   top: 0;
   display: flex;
   justify-content: space-between;
-  background-color: ${props => props.mode===true ? `${dark.backgroundColor}`:`${light.backgroundColor}`};
+  background-color: ${props => props.mode ? `${dark.backgroundColor}`:`${light.backgroundColor}`};
   padding: 0 28px;
   @media ${device.tablet} {
     padding: 0 100px;

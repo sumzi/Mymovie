@@ -16,8 +16,10 @@ import { CHANGE_MODE_REQUEST } from "../../../store/reducers/home";
 function Right({ mode }) {
   const dispatch = useDispatch();
   const { darkMode, changeModeLoading } = useSelector((state) => state.home);
+
   function onChange(checked) {
-    const tmp = checked?0:1;
+    console.log(checked)
+    const tmp = checked ? 1 : 0;
     dispatch({
       type: CHANGE_MODE_REQUEST,
       data: tmp,
