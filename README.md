@@ -1,4 +1,4 @@
-# 🎞MYMOVIE
+# 🎞 MYMOVIE
 <br/>
 <p align='center'>
   <img src='images/mymovie.png' width='200px'/>
@@ -68,7 +68,7 @@ src
 |:---:|:---:|
 |<img src='images/about_pc.png' />|<img src='images/about_mobile.png' width='600px'/>|
 
-영화의 정보, 줄거리, 배우, 이미지, 동영상을 볼 수 있으며 🤍이모티콘을 클릭하여 관심 있는 영화를 저장할 수 있습니다.
+영화의 정보, 줄거리, 배우, 이미지, 동영상을 볼 수 있으며 🤍아이콘을 클릭하여 관심 있는 영화를 저장할 수 있습니다.
 <br/>
 
 |Like page||
@@ -102,7 +102,9 @@ src
 <br/>
 
 ## 🤔 배운것
-* 초기 계획이 매우 중요하다는 것을 알게 되었다... 확실하게 정하지 않고 프로젝트를 진행하니깐 수정하는데만 시간이 오래걸렸다. 
-* Redux와 Redux-saga를 사용하여 비동기 상태 관리를 하는 방법
-* styled-components props 값으로 설정값을 바꾸는 것
+* 수정을 많이 하면서 초기 계획이 매우 중요하다는 것을 알게 되었다...
+* Redux와 Redux-saga를 사용하는 이유와, 비동기 상태 관리를 하는 방법
+* styled-components을 사용하여 css하는 방법
+* github web 호스팅 하는 방법
+
 <br/>
