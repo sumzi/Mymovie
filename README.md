@@ -52,6 +52,7 @@ src
 |:---:|:---:|
 |<img src='images/home_pc.png' />|<img src='images/home_mobile.png' width='600px'/>|
 
+<img src='images/home.gif'><br/>
 24시간 하루동안 유행하는 상위 4개의 영화를 carousel로 볼 수 있습니다.
 <br/>
 
@@ -60,6 +61,7 @@ src
 |<img src='images/running_pc.png' />|<img src='images/running_mobile.png' width='600px'/>|
 |<img src='images/running_pc_dark.png' />|<img src='images/running_mobile_dark.png' width='600px'/>|
 
+<img src='images/running.gif'><br/>
 현재 상영영화, 인기영화, 등급 높은 영화, 개봉예정 영화를 둘러볼 수 있습니다.
 무한 스크롤을 이용해 스크롤이 일정 높이에 도달했을 때 영화 20개를 더 가져옵니다.
 <br/>
@@ -82,6 +84,7 @@ src
 |:---:|:---:|
 |<img src='images/search_pc.png' />|<img src='images/search_mobile.png' width='600px'/>|
 
+<img src='images/search.gif'><br/>
 직접 검색하여 원하는 영화를 찾을 수 있습니다.
 <br/>
 
@@ -89,6 +92,7 @@ src
 |:---:|:---:|
 |<img src='images/light_mode.png' />|<img src='images/dark_mode.png' />|
 
+<img src='images/mode.gif'><br/>
 원하는 모드로 설정할 수 있습니다.
 <br/>
 
@@ -102,9 +106,9 @@ src
 <br/>
 
 ## 🤔 배운것
-* 수정을 많이 하면서 초기 계획이 매우 중요하다는 것을 알게 되었다...
+* 디자인을 확실하게 정하지 않아 수정으로 고생하면서, 프로젝트 계획단계가 매우 중요하다는 것을 느꼈다.
 * Redux와 Redux-saga를 사용하는 이유와, 비동기 상태 관리를 하는 방법
-* styled-components을 사용하여 css하는 방법
+* react기반의 CSS-in-JS 방식중 styled-components 라이브러리 사용하는 방법 
 * github web 호스팅 하는 방법
 
 <br/>
