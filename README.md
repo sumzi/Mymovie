@@ -97,7 +97,7 @@ src
 <br/>
 
 ## 🛠️ 기술 스택
-* react - 프로트 엔드 자바스크립트 라이브러리
+* react - view를 개발할수있도록 하는 라이브러리
 * react-router - SPA 라우팅 라이브러리
 * redux - 상태 관리 라이브러리
 * redux-saga  - 비동기 상태 관리 라이브러리
